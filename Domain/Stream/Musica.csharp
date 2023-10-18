@@ -1,0 +1,17 @@
+using System;
+
+namespace Playlist
+{
+    public class Playlist
+    {
+        public string Compositor { get; set; }
+
+        public string NomeMusica { get; set; }
+        
+        public Playlist(string compositor, string nomeMusica)
+        {
+            Compositor = compositor;
+            NomeMusica = nomeMusica;
+        }
+    }
+}
