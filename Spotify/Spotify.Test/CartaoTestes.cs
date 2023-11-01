@@ -1,4 +1,4 @@
-using Spotify.Domain;
+using Spotify.Domain.Banco.Agreggate;
 
 namespace Spotify.Test
 {

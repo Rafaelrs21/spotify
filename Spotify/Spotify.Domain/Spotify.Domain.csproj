@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="23.1.43" />
+    <PackageReference Include="Volo.Abp.Core" Version="7.4.1" />
+  </ItemGroup>
+
 </Project>
