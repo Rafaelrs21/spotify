@@ -7,8 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Syncfusion.Xamarin.Core" Version="23.1.43" />
-    <PackageReference Include="Volo.Abp.Core" Version="7.4.1" />
+    <ProjectReference Include="..\Spotify.Core\Spotify.Core.csproj" />
   </ItemGroup>
 
 </Project>

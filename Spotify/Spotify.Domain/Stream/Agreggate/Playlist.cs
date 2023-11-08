@@ -7,7 +7,7 @@ public class Playlist
     public Guid Id { get; set; }
     public string Nome { get; set; }
     public Boolean Publica { get; set; }
-    public Conta Conta { get; set; }
+    public Usuario Conta { get; set; }
     public string Nomeplaylist { get; set; }
     public List<Musica> ListaMusica { get; set; }
 

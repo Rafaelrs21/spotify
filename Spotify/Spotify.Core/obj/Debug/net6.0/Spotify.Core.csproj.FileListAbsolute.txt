@@ -1,0 +1,12 @@
+C:\Users\rafael.santiago\source\repos\Rafaelrs21\spotify\Spotify\Spotify.Core\bin\Debug\net6.0\Spotify.Core.deps.json
+C:\Users\rafael.santiago\source\repos\Rafaelrs21\spotify\Spotify\Spotify.Core\bin\Debug\net6.0\Spotify.Core.dll
+C:\Users\rafael.santiago\source\repos\Rafaelrs21\spotify\Spotify\Spotify.Core\bin\Debug\net6.0\Spotify.Core.pdb
+C:\Users\rafael.santiago\source\repos\Rafaelrs21\spotify\Spotify\Spotify.Core\obj\Debug\net6.0\Spotify.Core.csproj.AssemblyReference.cache
+C:\Users\rafael.santiago\source\repos\Rafaelrs21\spotify\Spotify\Spotify.Core\obj\Debug\net6.0\Spotify.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rafael.santiago\source\repos\Rafaelrs21\spotify\Spotify\Spotify.Core\obj\Debug\net6.0\Spotify.Core.AssemblyInfoInputs.cache
+C:\Users\rafael.santiago\source\repos\Rafaelrs21\spotify\Spotify\Spotify.Core\obj\Debug\net6.0\Spotify.Core.AssemblyInfo.cs
+C:\Users\rafael.santiago\source\repos\Rafaelrs21\spotify\Spotify\Spotify.Core\obj\Debug\net6.0\Spotify.Core.csproj.CoreCompileInputs.cache
+C:\Users\rafael.santiago\source\repos\Rafaelrs21\spotify\Spotify\Spotify.Core\obj\Debug\net6.0\Spotify.Core.dll
+C:\Users\rafael.santiago\source\repos\Rafaelrs21\spotify\Spotify\Spotify.Core\obj\Debug\net6.0\refint\Spotify.Core.dll
+C:\Users\rafael.santiago\source\repos\Rafaelrs21\spotify\Spotify\Spotify.Core\obj\Debug\net6.0\Spotify.Core.pdb
+C:\Users\rafael.santiago\source\repos\Rafaelrs21\spotify\Spotify\Spotify.Core\obj\Debug\net6.0\ref\Spotify.Core.dll

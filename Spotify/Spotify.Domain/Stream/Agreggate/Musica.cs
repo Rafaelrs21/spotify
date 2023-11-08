@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Spotify.Domain.Stream.ValueObject;
+using System;
 
 namespace Spotify.Domain.Stream.Agreggate;
 public class Musica
