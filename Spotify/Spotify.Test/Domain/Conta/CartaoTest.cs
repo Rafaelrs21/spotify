@@ -30,28 +30,9 @@ namespace Spotify.Test.Domain.Conta
 
             Assert.True(cartao.Transferencias.Count() > 0);
         }
+
         [Fact]
-        public void DeveFazerTransacaoSemSucesso()
-        {
-            Cartao cartao = new Cartao()
-            {
-                Id = Guid.NewGuid(),
-                CartaoAtivo = true,
-                LimiteDisponivel = 1000M,
-                NumeroCartao = "6465465466",
-            };
-
-            string nomeEmpresa = "Bananada";
-            string aviso = "Transação foi realizado com sucesso";
-            Decimal valor = 10.00M;
-
-            cartao.CriarTransacao(nomeEmpresa, valor, aviso);
-
-            Assert.Throws<CartaoException>(
-                () => cartao.Transferencias.Count() > 0);
-
-        }
-        public void DeveFazerTransacaoSemLimite()
+        public void NaoDeveCriarTransacaoComCartaoSemLimite()
         {
             Cartao cartao = new Cartao()
             {
@@ -65,11 +46,109 @@ namespace Spotify.Test.Domain.Conta
             string aviso = "Transação foi realizado com sucesso";
             Decimal valor = 10.00M;
 
+            Assert.Throws<CartaoException>(
+                () => cartao.CriarTransacao("Dummy", 19M, "Dummy Transacao"));
+
+        }
+
+        [Fact]
+        public void NaoDeveCriarTransacaoComCartaoValorDuplicado()
+        {
+            Cartao cartao = new Cartao()
+            {
+                Id = Guid.NewGuid(),
+                CartaoAtivo = true,
+                LimiteDisponivel = 1M,
+                NumeroCartao = "6465465466",
+            };
+
+            cartao.Transferencias.Add(new Spotify.Domain.Transacao.Agreggate.Transferencia()
+            {
+                TempoTranferencia = DateTime.Now,
+                Id = Guid.NewGuid(),
+                Comerciante = new Spotify.Domain.Transacao.ValueObject.Comerciante()
+                {
+                    NomeEmpresa = "Dummy"
+                },
+                Valor = 19M,
+                AvisoConfirmacao = "saljasdlak"
+            });
+
+            Assert.Throws<CartaoException>(
+                () => cartao.CriarTransacao("Dummy", 19M, "Dummy Transacao"));
+        }
+
+        [Fact]
+        public void NaoDeveCriarTransacaoComCartaoAltoFrequencia()
+        {
+            Cartao cartao = new Cartao()
+            {
+                Id = Guid.NewGuid(),
+                CartaoAtivo = true,
+                LimiteDisponivel = 1M,
+                NumeroCartao = "6465465466",
+            };
+
+            cartao.Transferencias.Add(new Spotify.Domain.Transacao.Agreggate.Transferencia()
+            {
+                TempoTranferencia = DateTime.Now.AddMinutes(-1),
+                Id = Guid.NewGuid(),
+                Comerciante = new Spotify.Domain.Transacao.ValueObject.Comerciante()
+                {
+                    NomeEmpresa = "Dummy"
+                },
+                Valor = 19M,
+                AvisoConfirmacao = "saljasdlak"
+            });
+
+            cartao.Transferencias.Add(new Spotify.Domain.Transacao.Agreggate.Transferencia()
+            {
+                TempoTranferencia = DateTime.Now.AddMinutes(-0.5),
+                Id = Guid.NewGuid(),
+                Comerciante = new Spotify.Domain.Transacao.ValueObject.Comerciante()
+                {
+                    NomeEmpresa = "Dummy"
+                },
+                Valor = 19M,
+                AvisoConfirmacao = "saljasdlak"
+            });
+
+            cartao.Transferencias.Add(new Spotify.Domain.Transacao.Agreggate.Transferencia()
+            {
+                TempoTranferencia = DateTime.Now,
+                Id = Guid.NewGuid(),
+                Comerciante = new Spotify.Domain.Transacao.ValueObject.Comerciante()
+                {
+                    NomeEmpresa = "Dummy"
+                },
+                Valor = 19M,
+                AvisoConfirmacao = "saljasdlak"
+            });
+
+
+            Assert.Throws<CartaoException>(
+                () => cartao.CriarTransacao("Dummy", 19M, "Dummy Transacao"));
+        }
+
+        [Fact]
+        public void NaoDeveCriarTransacaoComCartaoInativo()
+        {
+            Cartao cartao = new Cartao()
+            {
+                Id = Guid.NewGuid(),
+                CartaoAtivo = false,
+                LimiteDisponivel = 1000M,
+                NumeroCartao = "6465465466",
+            };
+
+            string nomeEmpresa = "Bananada";
+            string aviso = "Transação foi realizado com sucesso";
+            Decimal valor = 10.00M;
+
             cartao.CriarTransacao(nomeEmpresa, valor, aviso);
 
-            Assert.True(cartao.Transferencias.Count() > 0);
-
-
+            Assert.Throws<CartaoException>(
+                () => cartao.Transferencias.Count() > 0);
 
         }
     }

@@ -22,7 +22,6 @@ namespace Spotify.Core.Exception
         }
     }
 
-
     public class BusinessValidation
     {
         public string ErrorName { get; set; } = "Erros de Validação";

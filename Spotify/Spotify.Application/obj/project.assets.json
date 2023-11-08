@@ -1,0 +1,128 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "Spotify.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Spotify.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Spotify.Core.dll": {}
+        }
+      },
+      "Spotify.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Spotify.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Spotify.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Spotify.Domain.dll": {}
+        }
+      },
+      "Spotify.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Spotify.Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Spotify.Repository.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Spotify.Core/1.0.0": {
+      "type": "project",
+      "path": "../Spotify.Core/Spotify.Core.csproj",
+      "msbuildProject": "../Spotify.Core/Spotify.Core.csproj"
+    },
+    "Spotify.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Spotify.Domain/Spotify.Domain.csproj",
+      "msbuildProject": "../Spotify.Domain/Spotify.Domain.csproj"
+    },
+    "Spotify.Repository/1.0.0": {
+      "type": "project",
+      "path": "../Spotify.Repository/Spotify.Repository.csproj",
+      "msbuildProject": "../Spotify.Repository/Spotify.Repository.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "Spotify.Domain >= 1.0.0",
+      "Spotify.Repository >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\rafael.santiago\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\rafael.santiago\\source\\repos\\Rafaelrs21\\spotify\\Spotify\\Spotify.Application\\Spotify.Application.csproj",
+      "projectName": "Spotify.Application",
+      "projectPath": "C:\\Users\\rafael.santiago\\source\\repos\\Rafaelrs21\\spotify\\Spotify\\Spotify.Application\\Spotify.Application.csproj",
+      "packagesPath": "C:\\Users\\rafael.santiago\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\rafael.santiago\\source\\repos\\Rafaelrs21\\spotify\\Spotify\\Spotify.Application\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\rafael.santiago\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "C:\\Users\\rafael.santiago\\source\\repos\\Rafaelrs21\\spotify\\Spotify\\Spotify.Domain\\Spotify.Domain.csproj": {
+              "projectPath": "C:\\Users\\rafael.santiago\\source\\repos\\Rafaelrs21\\spotify\\Spotify\\Spotify.Domain\\Spotify.Domain.csproj"
+            },
+            "C:\\Users\\rafael.santiago\\source\\repos\\Rafaelrs21\\spotify\\Spotify\\Spotify.Repository\\Spotify.Repository.csproj": {
+              "projectPath": "C:\\Users\\rafael.santiago\\source\\repos\\Rafaelrs21\\spotify\\Spotify\\Spotify.Repository\\Spotify.Repository.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
