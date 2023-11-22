@@ -1,10 +1,5 @@
 ﻿using Spotify.Domain.Banco.Agreggate;
 using Spotify.Domain.Stream.Agreggate;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xunit;
 
 namespace Spotify.Test.Domain.Conta

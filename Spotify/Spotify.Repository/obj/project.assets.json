@@ -1,26 +1,63 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "Spotify.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Spotify.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Spotify.Core.dll": {}
+        }
+      },
+      "Spotify.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Spotify.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Spotify.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Spotify.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Spotify.Core/1.0.0": {
+      "type": "project",
+      "path": "../Spotify.Core/Spotify.Core.csproj",
+      "msbuildProject": "../Spotify.Core/Spotify.Core.csproj"
+    },
+    "Spotify.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Spotify.Domain/Spotify.Domain.csproj",
+      "msbuildProject": "../Spotify.Domain/Spotify.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "Spotify.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
-    "C:\\Users\\rafael.santiago\\.nuget\\packages\\": {}
+    "C:\\Users\\santi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rafael.santiago\\source\\repos\\Rafaelrs21\\spotify\\Spotify\\Spotify.Repository\\Spotify.Repository.csproj",
+      "projectUniqueName": "C:\\Users\\santi\\Source\\Repos\\Rafaelrs21\\spotify\\Spotify\\Spotify.Repository\\Spotify.Repository.csproj",
       "projectName": "Spotify.Repository",
-      "projectPath": "C:\\Users\\rafael.santiago\\source\\repos\\Rafaelrs21\\spotify\\Spotify\\Spotify.Repository\\Spotify.Repository.csproj",
-      "packagesPath": "C:\\Users\\rafael.santiago\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rafael.santiago\\source\\repos\\Rafaelrs21\\spotify\\Spotify\\Spotify.Repository\\obj\\",
+      "projectPath": "C:\\Users\\santi\\Source\\Repos\\Rafaelrs21\\spotify\\Spotify\\Spotify.Repository\\Spotify.Repository.csproj",
+      "packagesPath": "C:\\Users\\santi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\santi\\Source\\Repos\\Rafaelrs21\\spotify\\Spotify\\Spotify.Repository\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\rafael.santiago\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\santi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -33,7 +70,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\santi\\Source\\Repos\\Rafaelrs21\\spotify\\Spotify\\Spotify.Domain\\Spotify.Domain.csproj": {
+              "projectPath": "C:\\Users\\santi\\Source\\Repos\\Rafaelrs21\\spotify\\Spotify\\Spotify.Domain\\Spotify.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -61,7 +102,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

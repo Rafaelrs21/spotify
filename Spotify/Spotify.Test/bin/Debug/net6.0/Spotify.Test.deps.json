@@ -9,6 +9,7 @@
       "Spotify.Test/1.0.0": {
         "dependencies": {
           "Microsoft.NET.Test.Sdk": "17.5.0",
+          "Spotify.Application": "1.0.0",
           "Spotify.Domain": "1.0.0",
           "coverlet.collector": "3.2.0",
           "xunit": "2.4.2",
@@ -1021,6 +1022,16 @@
         }
       },
       "xunit.runner.visualstudio/2.4.5": {},
+      "Spotify.Application/1.0.0": {
+        "dependencies": {
+          "Spotify.Core": "1.0.0",
+          "Spotify.Domain": "1.0.0",
+          "Spotify.Repository": "1.0.0"
+        },
+        "runtime": {
+          "Spotify.Application.dll": {}
+        }
+      },
       "Spotify.Core/1.0.0": {
         "runtime": {
           "Spotify.Core.dll": {}
@@ -1032,6 +1043,14 @@
         },
         "runtime": {
           "Spotify.Domain.dll": {}
+        }
+      },
+      "Spotify.Repository/1.0.0": {
+        "dependencies": {
+          "Spotify.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Spotify.Repository.dll": {}
         }
       }
     }
@@ -1665,12 +1684,22 @@
       "path": "xunit.runner.visualstudio/2.4.5",
       "hashPath": "xunit.runner.visualstudio.2.4.5.nupkg.sha512"
     },
+    "Spotify.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "Spotify.Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
     "Spotify.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Spotify.Repository/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

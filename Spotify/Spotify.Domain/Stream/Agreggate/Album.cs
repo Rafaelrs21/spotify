@@ -2,13 +2,15 @@
 namespace Spotify.Domain.Stream.Agreggate;
 public class Album
 {
+    public Guid Id { get; set; }
     public string NomeAlbum { get; set; }
     public List<Musica> ListaMusica { get; set; }
     public Banda Banda { get; set; }
 
-    public Album(string nomeAlbum, List<Musica> listaMusica)
+    public Album(){}
+
+    public void CriarAlbum(string nomeAlbum)
     {
-        NomeAlbum = nomeAlbum;
-        ListaMusica = listaMusica;
+        this.NomeAlbum = nomeAlbum;
     }
 }

@@ -1,6 +1,5 @@
 ﻿using Spotify.Domain.Banco.ValueObject;
 using Spotify.Domain.Stream.Agreggate;
-using System;
 
 namespace Spotify.Domain.Banco.Agreggate;
 public class Usuario
@@ -35,6 +34,9 @@ public class Usuario
 
         //Criar Playlist Default
         this.CriarPlayList();
+
+        //Adicionar Banda Default
+        this.AdicionarBanda();
 
     }
 
@@ -71,9 +73,22 @@ public class Usuario
         this.Playlists.Add(new Playlist()
         {
             Id = Guid.NewGuid(),
-            Nome = nome,
+            Nomeplaylist = nome,
             Publica = false,
             Conta = this
         });
+    }
+
+    public void AdicionarBanda(string nomeBanda = "Default", string estiloMusica = "Default") 
+    {
+        this.BandasFavoritas.Add(new Banda()
+        {
+            Id = Guid.NewGuid(),
+            NomeBanda = nomeBanda,
+            EstiloMusica = estiloMusica    
+         });
+
+        this.CriarPlayList();
+
     }
 }

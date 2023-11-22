@@ -1,0 +1,17 @@
+C:\Users\santi\Source\Repos\Rafaelrs21\spotify\Spotify\Spotify.Repository\bin\Debug\net6.0\Spotify.Repository.deps.json
+C:\Users\santi\Source\Repos\Rafaelrs21\spotify\Spotify\Spotify.Repository\bin\Debug\net6.0\Spotify.Repository.dll
+C:\Users\santi\Source\Repos\Rafaelrs21\spotify\Spotify\Spotify.Repository\bin\Debug\net6.0\Spotify.Repository.pdb
+C:\Users\santi\Source\Repos\Rafaelrs21\spotify\Spotify\Spotify.Repository\bin\Debug\net6.0\Spotify.Core.dll
+C:\Users\santi\Source\Repos\Rafaelrs21\spotify\Spotify\Spotify.Repository\bin\Debug\net6.0\Spotify.Domain.dll
+C:\Users\santi\Source\Repos\Rafaelrs21\spotify\Spotify\Spotify.Repository\bin\Debug\net6.0\Spotify.Domain.pdb
+C:\Users\santi\Source\Repos\Rafaelrs21\spotify\Spotify\Spotify.Repository\bin\Debug\net6.0\Spotify.Core.pdb
+C:\Users\santi\Source\Repos\Rafaelrs21\spotify\Spotify\Spotify.Repository\obj\Debug\net6.0\Spotify.Repository.csproj.AssemblyReference.cache
+C:\Users\santi\Source\Repos\Rafaelrs21\spotify\Spotify\Spotify.Repository\obj\Debug\net6.0\Spotify.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\santi\Source\Repos\Rafaelrs21\spotify\Spotify\Spotify.Repository\obj\Debug\net6.0\Spotify.Repository.AssemblyInfoInputs.cache
+C:\Users\santi\Source\Repos\Rafaelrs21\spotify\Spotify\Spotify.Repository\obj\Debug\net6.0\Spotify.Repository.AssemblyInfo.cs
+C:\Users\santi\Source\Repos\Rafaelrs21\spotify\Spotify\Spotify.Repository\obj\Debug\net6.0\Spotify.Repository.csproj.CoreCompileInputs.cache
+C:\Users\santi\Source\Repos\Rafaelrs21\spotify\Spotify\Spotify.Repository\obj\Debug\net6.0\Spotify.Repository.csproj.CopyComplete
+C:\Users\santi\Source\Repos\Rafaelrs21\spotify\Spotify\Spotify.Repository\obj\Debug\net6.0\Spotify.Repository.dll
+C:\Users\santi\Source\Repos\Rafaelrs21\spotify\Spotify\Spotify.Repository\obj\Debug\net6.0\refint\Spotify.Repository.dll
+C:\Users\santi\Source\Repos\Rafaelrs21\spotify\Spotify\Spotify.Repository\obj\Debug\net6.0\Spotify.Repository.pdb
+C:\Users\santi\Source\Repos\Rafaelrs21\spotify\Spotify\Spotify.Repository\obj\Debug\net6.0\ref\Spotify.Repository.dll
