@@ -18,7 +18,7 @@ namespace Spotify.Test.Domain.Conta
             {
                 Id = Guid.NewGuid(),
                 CartaoAtivo = true,
-                LimiteDisponivel = 1000M,
+                LimiteCartao = 1000M,
                 NumeroCartao = "6465465466",
             };
 
@@ -38,7 +38,7 @@ namespace Spotify.Test.Domain.Conta
             {
                 Id = Guid.NewGuid(),
                 CartaoAtivo = true,
-                LimiteDisponivel = 1M,
+                LimiteCartao = 1M,
                 NumeroCartao = "6465465466",
             };
 
@@ -58,7 +58,7 @@ namespace Spotify.Test.Domain.Conta
             {
                 Id = Guid.NewGuid(),
                 CartaoAtivo = true,
-                LimiteDisponivel = 1M,
+                LimiteCartao = 1M,
                 NumeroCartao = "6465465466",
             };
 
@@ -85,7 +85,7 @@ namespace Spotify.Test.Domain.Conta
             {
                 Id = Guid.NewGuid(),
                 CartaoAtivo = true,
-                LimiteDisponivel = 1M,
+                LimiteCartao = 1M,
                 NumeroCartao = "6465465466",
             };
 
@@ -137,7 +137,7 @@ namespace Spotify.Test.Domain.Conta
             {
                 Id = Guid.NewGuid(),
                 CartaoAtivo = false,
-                LimiteDisponivel = 1000M,
+                LimiteCartao = 1000M,
                 NumeroCartao = "6465465466",
             };
 

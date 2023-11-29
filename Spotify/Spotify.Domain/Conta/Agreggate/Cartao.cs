@@ -11,7 +11,7 @@ public class Cartao
 
     public Guid Id { get; set; }
     public Boolean CartaoAtivo { get; set; }
-    public Decimal LimiteDisponivel { get; set; }
+    public Decimal LimiteCartao { get; set; }
     public String NumeroCartao { get; set; }
     public List<Transacao.Agreggate.Transferencia> Transferencias { get; set; }
 
@@ -46,7 +46,7 @@ public class Cartao
         transferencia.Id = Guid.NewGuid();
 
         //Diminui o limite com o valor da transação
-        this.LimiteDisponivel = this.LimiteDisponivel - transferencia.Valor;
+        this.LimiteCartao = this.LimiteCartao - transferencia.Valor;
 
         //Adicionar uma nova transação
         this.Transferencias.Add(transferencia);
@@ -64,12 +64,11 @@ public class Cartao
             });
 
         }
-
     }
 
     private void VerificaLimiteDisponivel(Transacao.Agreggate.Transferencia transferencia, CartaoException validationErrors)
     {
-        if (transferencia.Valor > this.LimiteDisponivel)
+        if (transferencia.Valor > this.LimiteCartao)
         {
             validationErrors.AddError(new Core.Exception.BusinessValidation()
             {

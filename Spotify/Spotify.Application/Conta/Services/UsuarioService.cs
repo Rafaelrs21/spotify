@@ -14,7 +14,7 @@ namespace Spotify.Application.Conta.Services
         private UsuarioRepository usarioRepository = new UsuarioRepository();
 
 
-        public CriarContaDto CriarConta(CriarContaDto conta)
+        public UsuarioDto CriarConta(UsuarioDto conta)
         {
             //Todo: Verificar pegar plano
             Plano plano = this.planoRepository.ObterPlanoPorId(conta.IdPlano);
@@ -31,7 +31,7 @@ namespace Spotify.Application.Conta.Services
             Cartao cartao = new Cartao();
             cartao.CartaoAtivo = conta.Cartao.CartaoAtivo;
             cartao.NumeroCartao = conta.Cartao.NumeroCartao;
-            cartao.LimiteDisponivel = conta.Cartao.LimiteCartao;
+            cartao.LimiteCartao = conta.Cartao.LimiteCartao;
 
             //Criar Usuario
             Usuario usuario = new Usuario();
@@ -43,6 +43,29 @@ namespace Spotify.Application.Conta.Services
 
             // Retornar Conta Criada
             return conta;
+        }
+
+        public UsuarioDto ObterUsuario(Guid id)
+        {
+            var usuario = this.usarioRepository.ObterUsuario(id);
+
+            if (usuario == null)
+                return null;
+
+            UsuarioDto result = new UsuarioDto()
+            {
+                Id = usuario.Id,
+                Cartao = new CartaoDto()
+                {
+                    CartaoAtivo = usuario.Cartoes.FirstOrDefault().CartaoAtivo,
+                    LimiteCartao = usuario.Cartoes.FirstOrDefault().LimiteCartao,
+                    NumeroCartao = "xxxx-xxxx-xxxx-xx"
+                },
+                CPF = usuario.CPF.NumeroFormatado(),
+                Nome = usuario.Nome,
+            };
+
+            return result;
         }
     }
 }

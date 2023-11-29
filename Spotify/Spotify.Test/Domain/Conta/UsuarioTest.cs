@@ -21,7 +21,7 @@ namespace Spotify.Test.Domain.Conta
             {
                 Id = Guid.NewGuid(),
                 CartaoAtivo = true,
-                LimiteDisponivel = 1000M,
+                LimiteCartao = 1000M,
                 NumeroCartao = "6465465466",
             };
 
@@ -45,7 +45,7 @@ namespace Spotify.Test.Domain.Conta
             Assert.Same(usuario.Cartoes[0], cartao);
 
             Assert.True(usuario.Playlists.Count > 0);
-            Assert.True(usuario.Playlists[0].Nome == "Favoritas");
+            Assert.True(usuario.Playlists[0].Nomeplaylist == "Favoritas");
             Assert.False(usuario.Playlists[0].Publica);
         }
 

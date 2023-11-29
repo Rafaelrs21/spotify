@@ -2,7 +2,7 @@
 
 namespace Spotify.Application.Conta.DTO
 {
-    public class CriarContaDto
+    public class UsuarioDto
     {
         public Guid Id { get; set; }
         

@@ -11,6 +11,13 @@ namespace Spotify.Repository.Conta
     {
         private static List<Usuario> usuarios = new List<Usuario>();
 
+        public Usuario ObterUsuario(Guid id)
+        {
+            return UsuarioRepository
+                        .usuarios
+                        .FirstOrDefault(x => x.Id == id);
+        }
+
         public void SalvarUsuario(Usuario usuario)
         {
             usuario.Id = Guid.NewGuid();

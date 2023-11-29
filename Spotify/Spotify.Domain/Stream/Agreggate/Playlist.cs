@@ -9,6 +9,7 @@ public class Playlist
     public Boolean Publica { get; set; }
     public Usuario Conta { get; set; }
     public List<Musica> ListaMusica { get; set; }
+    
 
     public Playlist()
     {

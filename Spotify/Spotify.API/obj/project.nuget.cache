@@ -1,15 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "lY0T371jR+jcJtl9S6u/8dzzzHqgqS3AELBIUXvY9e30YTD5poblRcu2hz2WPT8RpkKnT12wTgGq2bw3+q59Fw==",
+  "dgSpecHash": "mxblMRznl9X5bAWksfa1pPIslTHAFFf1MQz9L6TQyCvsbZMtfwqpYHLp433mZ6R7funDAkLlp/3a+YD8j9fWNQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\santi\\Source\\Repos\\Rafaelrs21\\spotify\\Spotify\\Spotify.API\\Spotify.API.csproj",
+  "projectFilePath": "C:\\Users\\rafael.santiago\\Source\\Repos\\Rafaelrs21\\spotify\\Spotify\\Spotify.API\\Spotify.API.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\santi\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
-    "C:\\Users\\santi\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
-    "C:\\Users\\santi\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
-    "C:\\Users\\santi\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
-    "C:\\Users\\santi\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
-    "C:\\Users\\santi\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+    "C:\\Users\\rafael.santiago\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\rafael.santiago\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\rafael.santiago\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "C:\\Users\\rafael.santiago\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "C:\\Users\\rafael.santiago\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "C:\\Users\\rafael.santiago\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
   ],
   "logs": []
 }
