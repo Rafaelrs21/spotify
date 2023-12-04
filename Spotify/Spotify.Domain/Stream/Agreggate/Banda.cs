@@ -12,4 +12,9 @@ public class Banda
     {
         this.ListaAlbum = new List<Album>();
     }
+
+    public void AdicionarAlbum(Album album)
+    {
+        this.ListaAlbum.Add(album);
+    }
 }

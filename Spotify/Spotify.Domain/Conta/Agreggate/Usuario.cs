@@ -89,6 +89,11 @@ public class Usuario
          });
 
         this.CriarPlayList();
+    }
 
+    public void Favoritar(Musica musica)
+    {
+        this.Playlists.FirstOrDefault(x => x.Nomeplaylist == "Favoritas")
+                      .ListaMusica.Add(musica);
     }
 }

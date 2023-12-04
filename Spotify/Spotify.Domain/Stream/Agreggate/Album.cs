@@ -4,13 +4,21 @@ public class Album
 {
     public Guid Id { get; set; }
     public string NomeAlbum { get; set; }
-    public List<Musica> ListaMusica { get; set; }
+    public List<Musica> ListaMusicas { get; set; }
     public Banda Banda { get; set; }
 
-    public Album(){}
-
-    public void CriarAlbum(string nomeAlbum)
+    public Album()
     {
-        this.NomeAlbum = nomeAlbum;
+        this.ListaMusicas = new List<Musica>();
+    }
+
+    public void AdicionarMusicas(List<Musica> musicas)
+    {
+        this.ListaMusicas.AddRange(musicas);
+    }
+
+    public void AdicionarMusicas(Musica musicas)
+    {
+        this.ListaMusicas.Add(musicas);
     }
 }
