@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Spotify.Streaming.Repository/1.0.0": {
+        "dependencies": {
+          "Spotify.Streaming.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Spotify.Streaming.Repository.dll": {}
+        }
+      },
+      "Spotify.Streaming.Domain/1.0.0": {
+        "runtime": {
+          "Spotify.Streaming.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Spotify.Streaming.Repository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Spotify.Streaming.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

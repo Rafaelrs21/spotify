@@ -1,0 +1,17 @@
+C:\Users\rafael.santiago\source\repos\Spotify.Streaming\Spotify.Streaming.Application\obj\Debug\net6.0\Spotify.Streaming.Application.csproj.AssemblyReference.cache
+C:\Users\rafael.santiago\source\repos\Spotify.Streaming\Spotify.Streaming.Application\obj\Debug\net6.0\Spotify.Streaming.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rafael.santiago\source\repos\Spotify.Streaming\Spotify.Streaming.Application\obj\Debug\net6.0\Spotify.Streaming.Application.AssemblyInfoInputs.cache
+C:\Users\rafael.santiago\source\repos\Spotify.Streaming\Spotify.Streaming.Application\obj\Debug\net6.0\Spotify.Streaming.Application.AssemblyInfo.cs
+C:\Users\rafael.santiago\source\repos\Spotify.Streaming\Spotify.Streaming.Application\obj\Debug\net6.0\Spotify.Streaming.Application.csproj.CoreCompileInputs.cache
+C:\Users\rafael.santiago\source\repos\Spotify.Streaming\Spotify.Streaming.Application\bin\Debug\net6.0\Spotify.Streaming.Application.deps.json
+C:\Users\rafael.santiago\source\repos\Spotify.Streaming\Spotify.Streaming.Application\bin\Debug\net6.0\Spotify.Streaming.Application.dll
+C:\Users\rafael.santiago\source\repos\Spotify.Streaming\Spotify.Streaming.Application\bin\Debug\net6.0\Spotify.Streaming.Application.pdb
+C:\Users\rafael.santiago\source\repos\Spotify.Streaming\Spotify.Streaming.Application\bin\Debug\net6.0\Spotify.Streaming.Domain.dll
+C:\Users\rafael.santiago\source\repos\Spotify.Streaming\Spotify.Streaming.Application\bin\Debug\net6.0\Spotify.Streaming.Repository.dll
+C:\Users\rafael.santiago\source\repos\Spotify.Streaming\Spotify.Streaming.Application\bin\Debug\net6.0\Spotify.Streaming.Repository.pdb
+C:\Users\rafael.santiago\source\repos\Spotify.Streaming\Spotify.Streaming.Application\bin\Debug\net6.0\Spotify.Streaming.Domain.pdb
+C:\Users\rafael.santiago\source\repos\Spotify.Streaming\Spotify.Streaming.Application\obj\Debug\net6.0\Spotify.Streaming.Application.csproj.CopyComplete
+C:\Users\rafael.santiago\source\repos\Spotify.Streaming\Spotify.Streaming.Application\obj\Debug\net6.0\Spotify.Streaming.Application.dll
+C:\Users\rafael.santiago\source\repos\Spotify.Streaming\Spotify.Streaming.Application\obj\Debug\net6.0\refint\Spotify.Streaming.Application.dll
+C:\Users\rafael.santiago\source\repos\Spotify.Streaming\Spotify.Streaming.Application\obj\Debug\net6.0\Spotify.Streaming.Application.pdb
+C:\Users\rafael.santiago\source\repos\Spotify.Streaming\Spotify.Streaming.Application\obj\Debug\net6.0\ref\Spotify.Streaming.Application.dll

@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "qs98iR5e5xXwEF18O1agSNXxGlRJq+zcjSLK5s30vSnvgdoELoV1ErGW3N3ZMhAPDzL4hQJ4OoIydtn14w1myg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\rafael.santiago\\source\\repos\\Spotify.Streaming\\Spotify.Streaming.API\\Spotify.Streaming.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\rafael.santiago\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\rafael.santiago\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\rafael.santiago\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\rafael.santiago\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\rafael.santiago\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\rafael.santiago\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}

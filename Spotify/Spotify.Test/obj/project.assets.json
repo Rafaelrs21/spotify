@@ -6438,19 +6438,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\santi\\.nuget\\packages\\": {}
+    "C:\\Users\\rafael.santiago\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\santi\\Source\\Repos\\Rafaelrs21\\spotify\\Spotify\\Spotify.Test\\Spotify.Test.csproj",
+      "projectUniqueName": "C:\\Users\\rafael.santiago\\Source\\Repos\\Rafaelrs21\\spotify\\Spotify\\Spotify.Test\\Spotify.Test.csproj",
       "projectName": "Spotify.Test",
-      "projectPath": "C:\\Users\\santi\\Source\\Repos\\Rafaelrs21\\spotify\\Spotify\\Spotify.Test\\Spotify.Test.csproj",
-      "packagesPath": "C:\\Users\\santi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\santi\\Source\\Repos\\Rafaelrs21\\spotify\\Spotify\\Spotify.Test\\obj\\",
+      "projectPath": "C:\\Users\\rafael.santiago\\Source\\Repos\\Rafaelrs21\\spotify\\Spotify\\Spotify.Test\\Spotify.Test.csproj",
+      "packagesPath": "C:\\Users\\rafael.santiago\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\rafael.santiago\\Source\\Repos\\Rafaelrs21\\spotify\\Spotify\\Spotify.Test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\santi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rafael.santiago\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6464,14 +6464,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\santi\\Source\\Repos\\Rafaelrs21\\spotify\\Spotify\\Spotify.API\\Spotify.API.csproj": {
-              "projectPath": "C:\\Users\\santi\\Source\\Repos\\Rafaelrs21\\spotify\\Spotify\\Spotify.API\\Spotify.API.csproj"
+            "C:\\Users\\rafael.santiago\\Source\\Repos\\Rafaelrs21\\spotify\\Spotify\\Spotify.API\\Spotify.API.csproj": {
+              "projectPath": "C:\\Users\\rafael.santiago\\Source\\Repos\\Rafaelrs21\\spotify\\Spotify\\Spotify.API\\Spotify.API.csproj"
             },
-            "C:\\Users\\santi\\Source\\Repos\\Rafaelrs21\\spotify\\Spotify\\Spotify.Application\\Spotify.Application.csproj": {
-              "projectPath": "C:\\Users\\santi\\Source\\Repos\\Rafaelrs21\\spotify\\Spotify\\Spotify.Application\\Spotify.Application.csproj"
+            "C:\\Users\\rafael.santiago\\Source\\Repos\\Rafaelrs21\\spotify\\Spotify\\Spotify.Application\\Spotify.Application.csproj": {
+              "projectPath": "C:\\Users\\rafael.santiago\\Source\\Repos\\Rafaelrs21\\spotify\\Spotify\\Spotify.Application\\Spotify.Application.csproj"
             },
-            "C:\\Users\\santi\\Source\\Repos\\Rafaelrs21\\spotify\\Spotify\\Spotify.Domain\\Spotify.Domain.csproj": {
-              "projectPath": "C:\\Users\\santi\\Source\\Repos\\Rafaelrs21\\spotify\\Spotify\\Spotify.Domain\\Spotify.Domain.csproj"
+            "C:\\Users\\rafael.santiago\\Source\\Repos\\Rafaelrs21\\spotify\\Spotify\\Spotify.Domain\\Spotify.Domain.csproj": {
+              "projectPath": "C:\\Users\\rafael.santiago\\Source\\Repos\\Rafaelrs21\\spotify\\Spotify\\Spotify.Domain\\Spotify.Domain.csproj"
             }
           }
         }
@@ -6527,7 +6527,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

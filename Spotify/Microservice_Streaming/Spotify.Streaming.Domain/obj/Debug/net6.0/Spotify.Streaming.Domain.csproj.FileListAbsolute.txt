@@ -1,0 +1,12 @@
+C:\Users\rafael.santiago\source\repos\Spotify.Streaming\Spotify.Streaming.Domain\obj\Debug\net6.0\Spotify.Streaming.Domain.csproj.AssemblyReference.cache
+C:\Users\rafael.santiago\source\repos\Spotify.Streaming\Spotify.Streaming.Domain\obj\Debug\net6.0\Spotify.Streaming.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rafael.santiago\source\repos\Spotify.Streaming\Spotify.Streaming.Domain\obj\Debug\net6.0\Spotify.Streaming.Domain.AssemblyInfoInputs.cache
+C:\Users\rafael.santiago\source\repos\Spotify.Streaming\Spotify.Streaming.Domain\obj\Debug\net6.0\Spotify.Streaming.Domain.AssemblyInfo.cs
+C:\Users\rafael.santiago\source\repos\Spotify.Streaming\Spotify.Streaming.Domain\obj\Debug\net6.0\Spotify.Streaming.Domain.csproj.CoreCompileInputs.cache
+C:\Users\rafael.santiago\source\repos\Spotify.Streaming\Spotify.Streaming.Domain\bin\Debug\net6.0\Spotify.Streaming.Domain.deps.json
+C:\Users\rafael.santiago\source\repos\Spotify.Streaming\Spotify.Streaming.Domain\bin\Debug\net6.0\Spotify.Streaming.Domain.dll
+C:\Users\rafael.santiago\source\repos\Spotify.Streaming\Spotify.Streaming.Domain\bin\Debug\net6.0\Spotify.Streaming.Domain.pdb
+C:\Users\rafael.santiago\source\repos\Spotify.Streaming\Spotify.Streaming.Domain\obj\Debug\net6.0\Spotify.Streaming.Domain.dll
+C:\Users\rafael.santiago\source\repos\Spotify.Streaming\Spotify.Streaming.Domain\obj\Debug\net6.0\refint\Spotify.Streaming.Domain.dll
+C:\Users\rafael.santiago\source\repos\Spotify.Streaming\Spotify.Streaming.Domain\obj\Debug\net6.0\Spotify.Streaming.Domain.pdb
+C:\Users\rafael.santiago\source\repos\Spotify.Streaming\Spotify.Streaming.Domain\obj\Debug\net6.0\ref\Spotify.Streaming.Domain.dll

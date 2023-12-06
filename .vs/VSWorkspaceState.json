@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Spotify",
+    "\\Spotify\\Spotify.API",
+    "\\Spotify\\Spotify.API\\Controllers"
   ],
-  "SelectedNode": "\\Spotify.sln",
+  "SelectedNode": "\\Spotify\\Spotify.API\\Controllers\\BandaController.cs",
   "PreviewInSolutionExplorer": false
 }

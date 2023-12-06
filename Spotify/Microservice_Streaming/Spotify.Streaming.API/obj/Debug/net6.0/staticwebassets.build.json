@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "kDmhfIOY0bg8FvlFJ4+uZdeQoV1nRcFFUQEg5eJaNDk=",
+  "Source": "Spotify.Streaming.API",
+  "BasePath": "_content/Spotify.Streaming.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
