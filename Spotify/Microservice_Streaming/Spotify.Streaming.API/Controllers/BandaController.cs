@@ -32,5 +32,16 @@ namespace Spotify.Streaming.API.Controllers
 
             return Ok(result);
         }
+
+        [HttpGet("musica/{id}")]
+        public IActionResult ObterMusica(Guid id)
+        {
+            var result = this._service.ObterMusica(id);
+
+            if (result == null)
+                return NotFound();
+
+            return Ok(result);
+        }
     }
 }

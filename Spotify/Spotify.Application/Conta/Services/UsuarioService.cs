@@ -1,23 +1,23 @@
 ﻿using Spotify.Application.Conta.DTO;
-using Spotify.Application.Conta.Interface;
 using Spotify.Core.Exception;
 using Spotify.Domain.Banco.Agreggate;
-using Spotify.Domain.Stream.Agreggate;
 using Spotify.Repository.Conta;
 using Spotify.Repository.Streaming;
+using Spotify.Streaming.Domain.Stream.Agreggate;
 
 namespace Spotify.Application.Conta.Services
 {
-    public class UsuarioService : IUsuarioService
+    public class UsuarioService
     {
+        private UsuarioRepository usuarioRepository = new UsuarioRepository();
         private PlanoRepository planoRepository = new PlanoRepository();
-        private UsuarioRepository usarioRepository = new UsuarioRepository();
+        private BandaRepository bandaRepository = new BandaRepository();
 
 
-        public UsuarioDto CriarConta(UsuarioDto conta)
+        public async Task<UsuarioDto> CriarConta(UsuarioDto conta)
         {
             //Todo: Verificar pegar plano
-            Plano plano = this.planoRepository.ObterPlanoPorId(conta.IdPlano);
+            Plano plano = await this.planoRepository.ObterPlano(conta.IdPlano);
 
             if (plano == null)
             {
@@ -38,8 +38,8 @@ namespace Spotify.Application.Conta.Services
             usuario.Criar(conta.Nome, conta.CPF, plano, cartao);
 
             //Gravar o usuario na base;
-            this.usarioRepository.SalvarUsuario(usuario);
-            conta.Id = usuario.Id;
+            this.usuarioRepository.SalvarUsuario(usuario);
+            conta.Id = usuario.IdUsuario;
 
             // Retornar Conta Criada
             return conta;
@@ -47,14 +47,14 @@ namespace Spotify.Application.Conta.Services
 
         public UsuarioDto ObterUsuario(Guid id)
         {
-            var usuario = this.usarioRepository.ObterUsuario(id);
+            var usuario = this.usuarioRepository.ObterUsuario(id);
 
             if (usuario == null)
                 return null;
 
             UsuarioDto result = new UsuarioDto()
             {
-                Id = usuario.Id,
+                Id = usuario.IdUsuario,
                 Cartao = new CartaoDto()
                 {
                     CartaoAtivo = usuario.Cartoes.FirstOrDefault().CartaoAtivo,
@@ -63,9 +63,62 @@ namespace Spotify.Application.Conta.Services
                 },
                 CPF = usuario.CPF.NumeroFormatado(),
                 Nome = usuario.Nome,
+                Playlists = new List<PlaylistDto>()
             };
 
+            foreach (var item in usuario.Playlists)
+            {
+                var playList = new PlaylistDto()
+                {
+                    Id = item.Id,
+                    Nome = item.NomePlaylist,
+                    Publica = item.Publica,
+                    Musicas = new List<Conta.DTO.MusicaDto>()
+                };
+
+                foreach (var musicas in item.Musicas)
+                {
+                    playList.Musicas.Add(new Conta.DTO.MusicaDto()
+                    {
+                        Duracao = musicas.Duracao,
+                        Id = musicas.Id,
+                        Nome = musicas.NomeMusica
+                    });
+                }
+
+                result.Playlists.Add(playList);
+            }
+
             return result;
+        }
+
+        public async Task FavoritarMusica(Guid id, Guid idMusica)
+        {
+            var usuario = this.usuarioRepository.ObterUsuario(id);
+
+            if (usuario == null)
+            {
+                throw new BusinessException(new BusinessValidation()
+                {
+                    ErrorMessage = "Não encontrei o usuário",
+                    ErrorName = nameof(FavoritarMusica)
+                });
+            }
+
+            var musica = await this.bandaRepository.ObterMusica(idMusica);
+
+            if (musica == null)
+            {
+                throw new BusinessException(new BusinessValidation()
+                {
+                    ErrorMessage = "Não encontrei a musica",
+                    ErrorName = nameof(FavoritarMusica)
+                });
+            }
+
+            usuario.Favoritar(musica);
+            this.usuarioRepository.Update(usuario);
+
         }
     }
 }

@@ -1,24 +1,23 @@
 ﻿using Spotify.Domain.Banco.ValueObject;
-using Spotify.Domain.Stream.Agreggate;
+using Spotify.Domain.Conta.Agreggate;
+using Spotify.Streaming.Domain.Stream.Agreggate;
 
 namespace Spotify.Domain.Banco.Agreggate;
 public class Usuario
 {
-    public Guid Id { get; set; }
+    public Guid IdUsuario { get; set; }
     public String Nome { get; set; }
     public CPF CPF { get; set; }
     public List<Cartao> Cartoes { get; set; }
     public List<Playlist> Playlists { get; set; }
-    public List<Banda> BandasFavoritas { get; set; }
     public List<Assinatura> Assinaturas { get; set; }
 
 
     public Usuario()
     {
         this.Playlists = new List<Playlist>();
-        this.BandasFavoritas = new List<Banda>();
         this.Assinaturas = new List<Assinatura>();
-        this.Cartoes= new List<Cartao>();
+        this.Cartoes = new List<Cartao>();
     }
 
     public void Criar(string nome, string cpf, Plano plano, Cartao cartao)
@@ -35,9 +34,6 @@ public class Usuario
         //Criar Playlist Default
         this.CriarPlayList();
 
-        //Adicionar Banda Default
-        this.AdicionarBanda();
-
     }
 
     private void AdicionarCartao(Cartao cartao)
@@ -47,53 +43,42 @@ public class Usuario
 
     public void AssinarPlano(Plano plano, Cartao cartao)
     {
-
-        //Debitar o valor do plano no cartão
-        cartao.CriarTransacao(plano.NomePlano, plano.ValorPlano, plano.PlanoBeneficios);
-
-        //Caso tenha uma assinatura ativa, desativa ela
-        if (this.Assinaturas.Count > 0 && this.Assinaturas.Any(x => x.AssinaturaAtiva))
         {
-            var planoAtivo = this.Assinaturas.FirstOrDefault(x => x.AssinaturaAtiva);
-            planoAtivo.AssinaturaAtiva = false;
+            //Debitar o valor do plano no cartão
+            cartao.CriarTransacao(plano.NomePlano, plano.ValorPlano, plano.Descricao);
+
+            //Caso tenha uma assinatura ativa, desativa ela
+            if (this.Assinaturas.Count > 0 && this.Assinaturas.Any(x => x.Ativo))
+            {
+                var planoAtivo = this.Assinaturas.FirstOrDefault(x => x.Ativo);
+                planoAtivo.Ativo = false;
+            }
+
+            //Adiciona uma nova assinatura
+            this.Assinaturas.Add(new Assinatura()
+            {
+                Ativo = true,
+                DtAssinatura = DateTime.Now,
+                Plano = plano,
+                Id = Guid.NewGuid()
+            });
         }
-
-        //Adiciona uma nova assinatura
-        this.Assinaturas.Add(new Assinatura()
-        {
-            Id = Guid.NewGuid(),
-            AssinaturaAtiva = true,
-            TempoAssinatura = DateTime.Now,
-            Plano = plano,
-        });
     }
 
-    public void CriarPlayList(string nome = "Favoritas")
+        public void CriarPlayList(string nome = "Favoritas")
     {
         this.Playlists.Add(new Playlist()
         {
             Id = Guid.NewGuid(),
-            Nomeplaylist = nome,
+            NomePlaylist = nome,
             Publica = false,
-            Conta = this
+            Usuario = this
         });
-    }
-
-    public void AdicionarBanda(string nomeBanda = "Default", string estiloMusica = "Default") 
-    {
-        this.BandasFavoritas.Add(new Banda()
-        {
-            Id = Guid.NewGuid(),
-            NomeBanda = nomeBanda,
-            EstiloMusica = estiloMusica    
-         });
-
-        this.CriarPlayList();
     }
 
     public void Favoritar(Musica musica)
     {
-        this.Playlists.FirstOrDefault(x => x.Nomeplaylist == "Favoritas")
-                      .ListaMusica.Add(musica);
+        this.Playlists.FirstOrDefault(x => x.NomePlaylist == "Favoritas")
+                      .Musicas.Add(musica);
     }
 }

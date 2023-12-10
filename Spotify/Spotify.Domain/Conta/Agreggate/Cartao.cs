@@ -55,14 +55,13 @@ public class Cartao
 
     private void IsCartaoAtivo(CartaoException validationErrors)
     {
-        if (this.CartaoAtivo == false)
+        if (this.CartaoAtivo != true)
         {
             validationErrors.AddError(new Core.Exception.BusinessValidation()
             {
-                ErrorMessage = "Cartão não está ativo",
+                ErrorMessage = "Cartão inativo",
                 ErrorName = nameof(CartaoException)
             });
-
         }
     }
 

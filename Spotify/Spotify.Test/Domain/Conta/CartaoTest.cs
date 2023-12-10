@@ -141,15 +141,8 @@ namespace Spotify.Test.Domain.Conta
                 NumeroCartao = "6465465466",
             };
 
-            string nomeEmpresa = "Bananada";
-            string aviso = "Transação foi realizado com sucesso";
-            Decimal valor = 10.00M;
-
-            cartao.CriarTransacao(nomeEmpresa, valor, aviso);
-
             Assert.Throws<CartaoException>(
-                () => cartao.Transferencias.Count() > 0);
-
+                () => cartao.CriarTransacao("Dummy", 19M, "Dummy Transacao"));
         }
     }
 }

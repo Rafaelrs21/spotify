@@ -13,10 +13,8 @@ namespace Spotify.Streaming.Repository.Streaming
                 PlanoRepository.plano.Add(new Plano()
                 {
                     Id = new Guid("8D044595-D4A6-4E1A-9F09-DAB92205C71C"),
-                    Descricao = "Plano Basico",
-                    NomePlano = "Plano Basico Musica",
-                    NivelPlano = "Basico",
-                    PlanoBeneficios = "Basico",
+                    NomePlano = "Plano Basico",
+                    NivelPlano = "Plano Basico Musica",
                     ValorPlano = 20M,
                 });
             }

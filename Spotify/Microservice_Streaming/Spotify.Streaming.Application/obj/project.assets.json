@@ -45,19 +45,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rafael.santiago\\.nuget\\packages\\": {}
+    "C:\\Users\\santi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rafael.santiago\\source\\repos\\Spotify.Streaming\\Spotify.Streaming.Application\\Spotify.Streaming.Application.csproj",
+      "projectUniqueName": "C:\\Users\\santi\\Source\\Repos\\Rafaelrs21\\spotify\\Spotify\\Microservice_Streaming\\Spotify.Streaming.Application\\Spotify.Streaming.Application.csproj",
       "projectName": "Spotify.Streaming.Application",
-      "projectPath": "C:\\Users\\rafael.santiago\\source\\repos\\Spotify.Streaming\\Spotify.Streaming.Application\\Spotify.Streaming.Application.csproj",
-      "packagesPath": "C:\\Users\\rafael.santiago\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rafael.santiago\\source\\repos\\Spotify.Streaming\\Spotify.Streaming.Application\\obj\\",
+      "projectPath": "C:\\Users\\santi\\Source\\Repos\\Rafaelrs21\\spotify\\Spotify\\Microservice_Streaming\\Spotify.Streaming.Application\\Spotify.Streaming.Application.csproj",
+      "packagesPath": "C:\\Users\\santi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\santi\\Source\\Repos\\Rafaelrs21\\spotify\\Spotify\\Microservice_Streaming\\Spotify.Streaming.Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\rafael.santiago\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\santi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -71,8 +71,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\rafael.santiago\\source\\repos\\Spotify.Streaming\\Spotify.Streaming.Repository\\Spotify.Streaming.Repository.csproj": {
-              "projectPath": "C:\\Users\\rafael.santiago\\source\\repos\\Spotify.Streaming\\Spotify.Streaming.Repository\\Spotify.Streaming.Repository.csproj"
+            "C:\\Users\\santi\\Source\\Repos\\Rafaelrs21\\spotify\\Spotify\\Microservice_Streaming\\Spotify.Streaming.Repository\\Spotify.Streaming.Repository.csproj": {
+              "projectPath": "C:\\Users\\santi\\Source\\Repos\\Rafaelrs21\\spotify\\Spotify\\Microservice_Streaming\\Spotify.Streaming.Repository\\Spotify.Streaming.Repository.csproj"
             }
           }
         }
@@ -102,7 +102,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

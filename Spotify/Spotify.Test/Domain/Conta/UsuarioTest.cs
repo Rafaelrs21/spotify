@@ -1,5 +1,6 @@
 ﻿using Spotify.Domain.Banco.Agreggate;
-using Spotify.Domain.Stream.Agreggate;
+using Spotify.Domain.Banco.Exception;
+using Spotify.Streaming.Domain.Stream.Agreggate;
 using Xunit;
 
 namespace Spotify.Test.Domain.Conta
@@ -45,12 +46,64 @@ namespace Spotify.Test.Domain.Conta
             Assert.Same(usuario.Cartoes[0], cartao);
 
             Assert.True(usuario.Playlists.Count > 0);
-            Assert.True(usuario.Playlists[0].Nomeplaylist == "Favoritas");
+            Assert.True(usuario.Playlists[0].NomePlaylist == "Favoritas");
             Assert.False(usuario.Playlists[0].Publica);
         }
 
-        public void DeveRealizarTransacao()
+        [Fact()]
+        public void NaoDeveCriarUsuarioComCPFInvalido()
         {
+            Plano plano = new Plano()
+            {
+                Descricao = "Lorem ipsum",
+                Id = Guid.NewGuid(),
+                NomePlano = "Plano Dummy",
+                ValorPlano = 19.90M
+            };
+
+            Cartao cartao = new Cartao()
+            {
+                Id = Guid.NewGuid(),
+                CartaoAtivo = true,
+                LimiteCartao = 1000M,
+                NumeroCartao = "6465465466",
+            };
+
+            string cpf = "406351545685";
+            string nome = "Dummy Usuario";
+            Usuario usuario = new Usuario();
+
+            Assert.Throws<CPFException>
+                (() => usuario.Criar(nome, cpf, plano, cartao));
+
+        }
+
+
+        [Fact()]
+        public void NaoDeveCriarUsuarioComCartaoInvalido()
+        {
+            Plano plano = new Plano()
+            {
+                Descricao = "Lorem ipsum",
+                Id = Guid.NewGuid(),
+                NomePlano = "Plano Dummy",
+                ValorPlano = 19.90M
+            };
+
+            Cartao cartao = new Cartao()
+            {
+                Id = Guid.NewGuid(),
+                CartaoAtivo = false,
+                LimiteCartao = 1000M,
+                NumeroCartao = "6465465466",
+            };
+
+            string cpf = "40635121000";
+            string nome = "Dummy Usuario";
+            Usuario usuario = new Usuario();
+
+            Assert.Throws<CartaoException>
+                (() => usuario.Criar(nome, cpf, plano, cartao));
 
         }
     }

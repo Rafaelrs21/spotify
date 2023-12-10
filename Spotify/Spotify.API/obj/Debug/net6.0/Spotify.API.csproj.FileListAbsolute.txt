@@ -78,3 +78,6 @@ C:\Users\rafael.santiago\Source\Repos\Rafaelrs21\spotify\Spotify\Spotify.API\obj
 C:\Users\rafael.santiago\Source\Repos\Rafaelrs21\spotify\Spotify\Spotify.API\obj\Debug\net6.0\Spotify.API.pdb
 C:\Users\rafael.santiago\Source\Repos\Rafaelrs21\spotify\Spotify\Spotify.API\obj\Debug\net6.0\Spotify.API.genruntimeconfig.cache
 C:\Users\rafael.santiago\Source\Repos\Rafaelrs21\spotify\Spotify\Spotify.API\obj\Debug\net6.0\ref\Spotify.API.dll
+C:\Users\santi\Source\Repos\Rafaelrs21\spotify\Spotify\Spotify.API\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\santi\Source\Repos\Rafaelrs21\spotify\Spotify\Spotify.API\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\santi\Source\Repos\Rafaelrs21\spotify\Spotify\Spotify.API\bin\Debug\net6.0\Newtonsoft.Json.dll

@@ -21,7 +21,7 @@ namespace Spotify.Test.Application.Conta.Service
                     LimiteCartao = 100,
                     NumeroCartao = "5248581002684983"
                 },
-                IdPlano = new Guid("8D044595-D4A6-4E1A-9F09-DAB92205C71C")
+               IdPlano = new Guid("8D044595-D4A6-4E1A-9F09-DAB92205C71C")
             };
 
             UsuarioService service = new UsuarioService();
@@ -31,7 +31,7 @@ namespace Spotify.Test.Application.Conta.Service
         }
 
         [Fact]
-        public void NaoDeveCriarContaComPlanoInvalido()
+        public async Task NaoDeveCriarContaComPlanoInvalido()
         {
             //Arrange
             UsuarioDto dto = new UsuarioDto()
@@ -49,7 +49,7 @@ namespace Spotify.Test.Application.Conta.Service
 
             UsuarioService service = new UsuarioService();
 
-            Assert.Throws<BusinessException>(() => service.CriarConta(dto));
+            Assert.ThrowsAsync<BusinessException>(() => service.CriarConta(dto));
         }
     }
 }

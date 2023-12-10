@@ -9,13 +9,14 @@ namespace Spotify.Streaming.Application.Streamimg.DTO
 {
     public class BandaDto
     {
+        [Required]
         public Guid Id { get; set; }
 
         [Required]
         public string NomeBanda { get; set; }
 
         [Required]
-        public string EstiloBanda { get; set; }
+        public string EstiloMusica { get; set; }
 
         public List<AlbumDto> Albums { get; set; }
     }
@@ -30,6 +31,7 @@ namespace Spotify.Streaming.Application.Streamimg.DTO
 
     public class MusicaDto
     {
+        [Required]
         public Guid Id { get; set; }
         public string NomeMusica { get; set; }
         public int Duracao { get; set; }

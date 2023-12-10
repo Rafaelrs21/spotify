@@ -6,15 +6,15 @@ public class Banda
     public Guid Id { get; set; }
     public string NomeBanda { get; set; }
     public string EstiloMusica { get; set; }
-    public List<Album> ListaAlbum { get; set; }
+    public List<Album> Albums { get; set; }
 
     public Banda()
     {
-        this.ListaAlbum = new List<Album>();
+        this.Albums = new List<Album>();
     }
 
     public void AdicionarAlbum(Album album)
     {
-        this.ListaAlbum.Add(album);
+        this.Albums.Add(album);
     }
 }

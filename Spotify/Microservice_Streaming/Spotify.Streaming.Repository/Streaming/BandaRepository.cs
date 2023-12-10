@@ -23,7 +23,7 @@ namespace Spotify.Streaming.Repository.Streaming
 
             foreach (var banda in Bandas)
             {
-                foreach (var album in banda.ListaAlbum)
+                foreach (var album in banda.Albums)
                 {
                     result = album.ListaMusicas.FirstOrDefault(x => x.Id == idMusica);
 
@@ -33,22 +33,6 @@ namespace Spotify.Streaming.Repository.Streaming
             }
 
             return result;
-
-            /*return Bandas.Select(x =>
-            {
-                return (from y in x.Albums
-                        select y.Musicas.FirstOrDefault(m => m.Id == idMusica))
-                       .FirstOrDefault();
-            }).FirstOrDefault();*/
-
-            /*
-              SELECT M.* FROM BANDAS B
-              INNER JOIN ALBUM A ON A.IDBANDA = B.ID
-              INNER JOIN MUSICA M ON M.IDLALBUM = A.ID
-              WHERE M.ID = @ID  
-            */
-
-
         }
     }
 }

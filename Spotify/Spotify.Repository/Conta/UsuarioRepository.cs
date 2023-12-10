@@ -1,9 +1,4 @@
 ﻿using Spotify.Domain.Banco.Agreggate;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Spotify.Repository.Conta
 {
@@ -15,12 +10,19 @@ namespace Spotify.Repository.Conta
         {
             return UsuarioRepository
                         .usuarios
-                        .FirstOrDefault(x => x.Id == id);
+                        .FirstOrDefault(x => x.IdUsuario == id);
         }
 
         public void SalvarUsuario(Usuario usuario)
         {
-            usuario.Id = Guid.NewGuid();
+            usuario.IdUsuario = Guid.NewGuid();
+            UsuarioRepository.usuarios.Add(usuario);
+        }
+
+        public void Update(Usuario usuario)
+        {
+            Usuario usuarioOld = this.ObterUsuario(usuario.IdUsuario);
+            UsuarioRepository.usuarios.Remove(usuarioOld);
             UsuarioRepository.usuarios.Add(usuario);
         }
     }

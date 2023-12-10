@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "N/98OcUoY9OaD1AF3Qt15/aj3RuGhITNPhkmJA2GQIhj0ExxCyosEbuSLU13mQ66/VYGqj9l0ngIMHqGGuQMXg==",
+  "dgSpecHash": "JVDwvplORCeqhCiK9NcMxGJ6o9DSCz4/8XI0CYihU/PTabiHXQsBUYEkXTeSqHI+fXyEo30xYklv5QRuS7BChQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\rafael.santiago\\source\\repos\\Spotify.Streaming\\Spotify.Streaming.Application\\Spotify.Streaming.Application.csproj",
+  "projectFilePath": "C:\\Users\\santi\\Source\\Repos\\Rafaelrs21\\spotify\\Spotify\\Microservice_Streaming\\Spotify.Streaming.Application\\Spotify.Streaming.Application.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

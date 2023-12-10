@@ -9,7 +9,7 @@ namespace Spotify.Test.Controller
     public class UsuarioControllerTests
     {
         [Fact]
-        public void DeveChamarPostCriarUsuaarioComSucesso()
+        public void DeveChamarPostCriarUsuarioComSucesso()
         {
             UsuarioDto dto = new UsuarioDto()
             {

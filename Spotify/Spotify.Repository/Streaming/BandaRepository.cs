@@ -1,54 +1,32 @@
-﻿using Spotify.Domain.Stream.Agreggate;
+﻿using Spotify.Streaming.Domain.Stream.Agreggate;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Text.Json;
+using System.Threading.Tasks;
 
 namespace Spotify.Repository.Streaming
 {
     public class BandaRepository
     {
-        private static List<Banda> Bandas = new List<Banda>();
+        private HttpClient HttpClient { get; set; }
 
-        public void Criar(Banda banda)
+        public BandaRepository()
         {
-            banda.Id = Guid.NewGuid();
-            Bandas.Add(banda);
+            this.HttpClient = new HttpClient();
         }
 
-        public Banda ObterBanda(Guid id)
+        public async Task<Musica> ObterMusica(Guid id)
         {
-            return Bandas.FirstOrDefault(x => x.Id == id);
-        }
+            var result = await this.HttpClient.GetAsync($"https://localhost:7156/api/banda/musica/{id}");
 
-        public Musica ObterMusica(Guid idMusica)
-        {
-            Musica result = null;
+            if (result.IsSuccessStatusCode == false)
+                return null;
 
-            foreach (var banda in Bandas)
-            {
-                foreach (var album in banda.ListaAlbum)
-                {
-                    result = album.ListaMusicas.FirstOrDefault(x => x.Id == idMusica);
+            var content = await result.Content.ReadAsStringAsync();
 
-                    if (result != null)
-                        break;
-                }
-            }
-
-            return result;
-
-            /*return Bandas.Select(x =>
-            {
-                return (from y in x.Albums
-                        select y.Musicas.FirstOrDefault(m => m.Id == idMusica))
-                       .FirstOrDefault();
-            }).FirstOrDefault();*/
-
-            /*
-              SELECT M.* FROM BANDAS B
-              INNER JOIN ALBUM A ON A.IDBANDA = B.ID
-              INNER JOIN MUSICA M ON M.IDLALBUM = A.ID
-              WHERE M.ID = @ID  
-            */
-
-
+            return JsonSerializer.Deserialize<Musica>(content);
         }
     }
 }

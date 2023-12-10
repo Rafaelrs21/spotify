@@ -13,7 +13,7 @@ namespace Spotify.Streaming.Application.Streamimg.Service
         {
             Banda banda = new Banda()
             {
-                EstiloMusica = dto.EstiloBanda,
+                EstiloMusica = dto.EstiloMusica,
                 NomeBanda = dto.NomeBanda,
             };
 
@@ -24,7 +24,7 @@ namespace Spotify.Streaming.Application.Streamimg.Service
                     Album album = new Album()
                     {
                         Id = Guid.NewGuid(),
-                        NomeAlbum = item.NomeAlbum
+                        NomeAlbum = item.NomeAlbum,
                     };
 
                     if (item.Musicas != null)
@@ -62,15 +62,15 @@ namespace Spotify.Streaming.Application.Streamimg.Service
             BandaDto dto = new BandaDto()
             {
                 Id = banda.Id,
-                EstiloBanda = banda.EstiloMusica,
+                EstiloMusica = banda.EstiloMusica,
                 NomeBanda = banda.NomeBanda,
             };
 
-            if (banda.ListaAlbum != null)
+            if (banda.Albums != null)
             {
                 dto.Albums = new List<AlbumDto>();
 
-                foreach (var album in banda.ListaAlbum)
+                foreach (var album in banda.Albums)
                 {
                     AlbumDto albumDto = new AlbumDto()
                     {
@@ -97,9 +97,19 @@ namespace Spotify.Streaming.Application.Streamimg.Service
 
         }
 
-        public Musica ObterMusica(Guid idMusica)
+        public MusicaDto ObterMusica(Guid idMusica)
         {
-            return this.Repository.ObterMusica(idMusica);
+            var musica = this.Repository.ObterMusica(idMusica);
+
+            if (musica == null)
+                return null;
+
+            return new MusicaDto()
+            {
+                Duracao = musica.Duracao.Valor,
+                Id = musica.Id,
+                NomeMusica = musica.NomeMusica
+            };
         }
     }
 }
